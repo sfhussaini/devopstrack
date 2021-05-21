@@ -14,7 +14,7 @@ public class AppTest {
 		assertNotNull("Divide should return result: ", classUnderTest.divide(10,2));
 	}	
 	
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void testDenominatorZero(){
 		App classUnderTest = new App();
 		classUnderTest.divide(10,0);
